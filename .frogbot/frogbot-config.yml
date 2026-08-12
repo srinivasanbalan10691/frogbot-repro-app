@@ -3,8 +3,7 @@
       repoName: frogbot-repro-app
       branches:
         - main
-        - develop
-        - test-1
+
     scan:
       projects:
         - workingDirs:
