@@ -1,0 +1,8 @@
+{
+  "name": "sc-backend",
+  "version": "1.0.0",
+  "description": "Test project for Frogbot repro",
+  "dependencies": {
+    "lodash": "4.17.15"
+  }
+}
