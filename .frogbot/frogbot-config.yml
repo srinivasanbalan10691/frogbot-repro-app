@@ -1,0 +1,12 @@
+- params:
+    git:
+      repoName: frogbot-repro-app
+      branches:
+        - main
+    scan:
+      projects:
+        - workingDirs:
+            - "sc-backend"
+          installCommand: "npm install"
+          pathExclusions:
+            - "**/node_modules/**"
