@@ -2,7 +2,7 @@
     git:
       repoName: frogbot-repro-app
       branches:
-        - develop
+        - ${{ env.CURRENT_BRANCH }}
     scan:
       projects:
         - workingDirs:
