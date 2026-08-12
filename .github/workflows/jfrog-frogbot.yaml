@@ -1,0 +1,23 @@
+name: "Frogbot Security Scan (PR Not Fail)"
+
+on:
+  pull_request_target:
+    types: [opened, synchronize]
+  push:
+  workflow_dispatch:
+
+permissions:
+  pull-requests: write
+  contents: read
+  id-token: write
+
+jobs:
+  frogbot-scan:
+    if: >-
+      ${{
+           github.event_name == 'pull_request_target'
+        || github.event_name == 'workflow_dispatch'
+        || (github.event_name == 'push' && github.ref_name == github.event.repository.default_branch)
+      }}
+    uses: srinivasanbalan10691/jfrog-shared/.github/workflows/reusable-jfrog-frogbot-PR_Not_Fail-survey-core.yaml@main
+    secrets: inherit
